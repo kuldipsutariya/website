@@ -158,9 +158,10 @@ export function Navbar() {
                     {link.label}
                   </button>
 
+                  {/* ✅ Scrollable dropdown for all 7 items */}
                   <div
-                    className={`overflow-hidden transition-all duration-500 ${
-                      mobileServicesOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                    className={`overflow-y-auto max-h-[80vh] transition-all duration-500 ${
+                      mobileServicesOpen ? "opacity-100" : "opacity-0"
                     }`}
                   >
                     {services.map((service) => (
